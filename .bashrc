@@ -1,5 +1,8 @@
-[ -n "$PS1" ] && source ~/.bash_profile
+# Set the base PS1
+PS1="\u:\h \W$ "
 
-source ~/.git-prompt.sh
+source ~/.bash_profile
 
-source ~/.git-completion.sh
+if [ -f ~/.git-completion.sh ]; then
+    source ~/.git-completion.sh
+fi 
